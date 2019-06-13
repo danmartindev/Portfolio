@@ -1,0 +1,21 @@
+.material-icons{
+    font-size: 200px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+#main-wrap{
+    height: 100%;
+    background-color: blue;
+}
+
+#link-wrap{
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    height: 100%;
+}
