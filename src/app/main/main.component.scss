@@ -9,14 +9,10 @@
     user-select: none; 
 }
 
-#main-wrap{
-    height: 100%;
-    z-index: 0;
-}
-
 #link-wrap{
     max-width: 800px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin: auto;
     height: 100%;
