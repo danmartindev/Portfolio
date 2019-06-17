@@ -13,8 +13,7 @@ $extra: #02679E;
 // $light: #B469FF;
 // $extra: #8F1DFF;
 
-
-$accent: #FEFF83;
+$accent: #FFDF56;
 
 // THEME VALUES //
 $port-primary: (
@@ -51,20 +50,20 @@ $port-primary: (
 );
 
 $port-accent: (
-  50: #FEFF83,
-  100: #FEFF83,
-  200: #FEFF83,
-  300: #FEFF83,
-  400: #FEFF83,
-  500: #FEFF83,
-  600: #FEFF83,
-  700: #FEFF83,
-  800: #FEFF83,
-  900: #FEFF83,
-  A100: #FEFF83,
-  A200: #FEFF83,
-  A400: #FEFF83,
-  A700: #FEFF83,
+  50: $accent,
+  100: $accent,
+  200: $accent,
+  300: $accent,
+  400: $accent,
+  500: $accent,
+  600: $accent,
+  700: $accent,
+  800: $accent,
+  900: $accent,
+  A100: $accent,
+  A200: $accent,
+  A400: $accent,
+  A700: $accent,
   contrast: (
     50: white,
     100: white,
