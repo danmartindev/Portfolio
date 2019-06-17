@@ -1,5 +1,36 @@
 @import "../../colors.scss";
 
+#main-wrap{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.link-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0px auto;
+    color: $dark;
+
+    i {
+        margin: 10px 30px;
+    }
+
+    i:hover {   
+        color: $accent; 
+    }
+
+    span {
+        text-align: center;
+        width: 200px;
+        margin: 0px 30px;
+        font-size: 20pt;
+    }
+}
+
 .material-icons{
     font-size: 200px;
     cursor: pointer;
@@ -9,11 +40,3 @@
     user-select: none; 
 }
 
-#link-wrap{
-    max-width: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    height: 100%;
-}
