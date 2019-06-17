@@ -1,5 +1,16 @@
-<div id="link-wrap">
-  <i class="material-icons">memory</i>
-  <i class="material-icons">insert_drive_file</i>
-  <i class="material-icons">tag_faces</i>
+<div id="main-wrap">
+
+  <div class="link-wrap">
+    <i class="material-icons">memory</i>
+    <i class="material-icons">tag_faces</i>
+    <i class="material-icons">insert_drive_file</i>
+  </div>
+
+  <div class="link-wrap" *ngIf="onHover">
+    <span>My Work</span>
+    <span>About Me</span>
+    <span>My Resume</span>
+  </div>
+
 </div>
+
