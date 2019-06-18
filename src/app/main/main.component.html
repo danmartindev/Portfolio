@@ -1,4 +1,4 @@
-<div id="main-wrap">
+<div id="main-wrap" @mainAnim>
 
   <!-- link images -->
   <div class="link-wrap">
@@ -7,6 +7,7 @@
       *ngFor="let l of links"
       (mouseenter)="mouseEnter(l)" 
       (mouseleave)="mouseLeave(l)"
+      [@fadeUp]="l.state"
     >{{l.image}}</i>
   </div>
 
