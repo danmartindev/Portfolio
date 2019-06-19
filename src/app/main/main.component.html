@@ -5,6 +5,7 @@
     <i 
       class="material-icons" 
       *ngFor="let l of links"
+      routerLink="{{l.route}}"
       (mouseenter)="mouseEnter(l)" 
       (mouseleave)="mouseLeave(l)"
       [@fadeUp]="l.state"
