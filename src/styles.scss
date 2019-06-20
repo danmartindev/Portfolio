@@ -10,9 +10,13 @@ body {
 }
 
 
-main{
-    height: 90%;
+
+app-header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
 }
+
 
 app-footer{
     position: fixed;
