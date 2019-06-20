@@ -6,7 +6,7 @@ import { WorkComponent } from './work/work.component';
 
 const routes: Routes = [
   { path: 'main', component: MainComponent, data: {animation: "Main"} },
-  { path: 'work', component: WorkComponent, data: {animation: "Work"} },
+  { path: 'work', component: WorkComponent, data: {animation: "Sub"} },
   { path: '',
     redirectTo: '/main',
     pathMatch: 'full'
