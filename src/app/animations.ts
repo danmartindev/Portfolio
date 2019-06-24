@@ -64,7 +64,7 @@ export let fadeUp =
     ]),
 
     transition(':enter', [
-        animate('300ms 250ms ease-in')
+        animate('300ms 150ms ease-in')
     ])
   ])
 
