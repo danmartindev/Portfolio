@@ -4,4 +4,20 @@
     padding-top: 25px;
     width: 80%;
     margin: auto;
+
+    
+}
+
+.myimg{
+    min-width: 400px;
+    height: 400px;
+    background-color: white;
+}
+
+
+mat-tab-group{
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
 }
