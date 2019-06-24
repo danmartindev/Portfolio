@@ -9,12 +9,14 @@ body {
     background-color: $light;
 }
 
-
-
-app-header{
-    
+.clean-btn{
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    outline:none;
 }
-
 
 app-footer{
     position: fixed;
