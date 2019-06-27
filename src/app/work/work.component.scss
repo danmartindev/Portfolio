@@ -1,4 +1,4 @@
-
+@import '../../colors.scss';
 
 .tab-wrap{
     padding-top: 25px;
@@ -14,10 +14,12 @@
     background-color: white;
 }
 
+mat-expansion-panel{
+    background-color: $light;
+    box-shadow: none !important;
+    width: 400px;
+}
 
-mat-tab-group{
-    -webkit-user-select: none;
-    -moz-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none; 
+.collapser{
+
 }
