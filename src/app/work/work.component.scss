@@ -1,11 +1,35 @@
 @import '../../colors.scss';
 
+#work-wrap{
+    
+}
+
+.entry-wrap{
+    width: 45%;
+    h1 {
+        font-size: 30px;
+        margin: 0px;
+    }
+
+    h3{
+        margin: 10px 0px;
+    }
+    
+    button{
+        color: white;
+        //background-color: $extra;
+        width: 100%;
+    }
+}
+
 .tab-wrap{
     padding-top: 25px;
+    color: $dark;
     width: 80%;
     margin: auto;
-
-    
+    display: flex;
+    justify-content: space-between; 
+   
 }
 
 .myimg{
