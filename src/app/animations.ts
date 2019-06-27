@@ -70,9 +70,18 @@ export let fadeUp =
 
 export let dropDown =
   trigger('dropDown', [
-    state('void', style({ transform: 'translateY(-100%)'})),
+    state('void', style({ transform: 'translateY(-100%)', opacity: 0})),
     transition(':enter', [
       animate('1s ease-in')
+    ])
+  ])
+
+export let collapser = 
+  trigger('collapser', [
+    state('*', style({ height: '0px'})),
+    state('expanded', style({ height: '*'})),
+    transition('* <=> expanded', [
+      animate('.3s ease-in-out')
     ])
   ])
 
