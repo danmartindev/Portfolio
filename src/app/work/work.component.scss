@@ -5,7 +5,9 @@
 }
 
 .entry-wrap{
+    min-width: 375px;
     width: 45%;
+    overflow: hidden;
     h1 {
         font-size: 30px;
         margin: 0px;
@@ -22,6 +24,11 @@
     }
 }
 
+.collapser{
+
+}
+
+
 .tab-wrap{
     padding-top: 25px;
     color: $dark;
@@ -29,6 +36,7 @@
     margin: auto;
     display: flex;
     justify-content: space-between; 
+    flex-wrap: wrap;
    
 }
 
@@ -44,6 +52,3 @@ mat-expansion-panel{
     width: 400px;
 }
 
-.collapser{
-
-}
