@@ -78,10 +78,10 @@ export let dropDown =
 
 export let collapser = 
   trigger('collapser', [
-    state('*', style({ height: '0px'})),
+    state('*', style({ height: '0px', opacity: 0})),
     state('expanded', style({ height: '*'})),
     transition('* <=> expanded', [
-      animate('.3s ease-in-out')
+      animate('0.3s ease-in-out'),
     ])
-  ])
 
+  ])
