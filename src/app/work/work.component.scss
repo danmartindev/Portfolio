@@ -8,6 +8,8 @@
     min-width: 375px;
     width: 45%;
     overflow: hidden;
+    color: $dark;
+    margin-bottom: 25px;
     h1 {
         font-size: 30px;
         margin: 0px;
@@ -19,13 +21,13 @@
     
     button{
         color: white;
-        //background-color: $extra;
-        width: 100%;
+        background-color: $extra;
+        display: block;
+        margin: auto;
+        width: 50px;
+        height: 30px;
+        line-height: 30px;
     }
-}
-
-.collapser{
-
 }
 
 
