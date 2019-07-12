@@ -11,6 +11,7 @@ import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { WorkComponent } from './work/work.component';
+import { ResumeComponent } from './resume/resume.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { WorkComponent } from './work/work.component';
     MainComponent,
     HeaderComponent,
     FooterComponent,
-    WorkComponent
+    WorkComponent,
+    ResumeComponent
   ],
   imports: [
     AppRoutingModule,
