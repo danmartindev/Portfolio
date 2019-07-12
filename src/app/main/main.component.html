@@ -8,14 +8,14 @@
       routerLink="{{l.route}}"
       (mouseenter)="mouseEnter(l)" 
       (mouseleave)="mouseLeave(l)"
-      [@fadeUp]="l.state"
+      [@colorUp]="l.state"
     >{{l.image}}</i>
   </div>
 
   <!-- link text -->
   <div class="link-wrap">
     <span *ngFor="let l of links">
-      <span [hidden]="l.isHidden">{{l.text}}</span>
+      <span [@fadeUp]="l.state">{{l.text}}</span>
     </span>
   </div>
 
