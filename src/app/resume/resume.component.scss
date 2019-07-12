@@ -1,0 +1,13 @@
+.iframe-container {
+    overflow: hidden;
+    position: relative;
+
+    iframe{
+        border: 0;
+        height: 1000px;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+ 
