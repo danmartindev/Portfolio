@@ -9,12 +9,16 @@ body {
     background-color: $light;
 }
 
-.clean-btn{
-    cursor: pointer;
+%selectless{
     -webkit-user-select: none;
     -moz-user-select: none; 
     -ms-user-select: none; 
     user-select: none; 
+}
+
+.clean-btn{
+    @extend %selectless;
+    cursor: pointer;
     outline:none;
 }
 
