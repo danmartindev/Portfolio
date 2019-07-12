@@ -5,7 +5,7 @@ import { trigger, state, transition, style, animate, query, stagger, animateChil
 export const routingAnims = 
   trigger('routeAnimations', [
     //animation from main page to a sub-page
-    transition('Main => Sub', [
+    transition('Main => *', [
       query(':enter, :leave', style({ position: 'fixed', width:'100%', height: '80%' })
         , { optional: true }),
       group([ 
@@ -47,14 +47,23 @@ export let mainAnim =
   trigger('mainAnim', [
 
     transition(':enter', [
-        query('@fadeUp', stagger(200, animateChild()), { optional: true }),
-        query('@dropDown', animateChild(), { optional: true }), 
+        query('@colorUp', stagger(200, animateChild()), { optional: true }),
+        //query('@dropDown', animateChild(), { optional: true }), 
     ]),
   ])
 
-//*** REUSABLE ANIMATIONS ***//
-export let fadeUp =  
-  trigger('fadeUp', [
+//*** SMALL REUSABLE ANIMATIONS ***//
+export let collapser = 
+  trigger('collapser', [
+    state('*', style({ height: '0px', opacity: 0})),
+    state('expanded', style({ height: '*'})),
+    transition('* <=> expanded', [
+      animate('0.3s ease-in-out'),
+    ])
+  ])
+
+export let colorUp =  
+  trigger('colorUp', [
 
     state('void', style({ opacity: 0, transform: 'translateY(10px)'})),
     state('hovered', style({  transform: 'translateY(-10px)', color: '#FFDF56'})),
@@ -70,18 +79,33 @@ export let fadeUp =
 
 export let dropDown =
   trigger('dropDown', [
-    state('void', style({ transform: 'translateY(-100%)', opacity: 0})),
-    transition(':enter', [
-      animate('1s ease-in')
-    ])
+    // state('void', style({ transform: 'translateY(-100%)', opacity: 0})),
+    // transition(':enter', [
+    //   animate('1s ease-in')
+    // ])
   ])
 
-export let collapser = 
-  trigger('collapser', [
-    state('*', style({ height: '0px', opacity: 0})),
-    state('expanded', style({ height: '*'})),
+export let fadeUp =  
+  trigger('fadeUp', [
+
+    state('*', style({ transform: 'translateY(10px)', opacity: 0 })),
+    state('hovered', style({  transform: 'translateY(-10px)', opacity: '*' })),
+
+    transition('* <=> hovered', [
+        animate('250ms ease-in-out'),
+    ]),
+  ])
+
+export let rotate =  
+  trigger('rotate', [
+    
+    state('expanded', style({ transform: 'rotate(180deg)' })),
+    //state('rotated', style({ transform: 'rotate(-180)' })),
+
     transition('* <=> expanded', [
-      animate('0.3s ease-in-out'),
-    ])
-
+        animate('250ms ease-in-out'),
+    ]),
   ])
+
+
+
