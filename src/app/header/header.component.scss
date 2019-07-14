@@ -10,6 +10,11 @@ mat-toolbar{
     outline: none;
 }
 
+#menuBtn{
+    float: right;
+}
+
+// pushes other content down
 #spacer{
     height: 64px;
 }
