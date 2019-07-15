@@ -1,7 +1,12 @@
 <div @mainAnim>
   <div class="iframe-container">
-      <iframe src="../../assets/DanMartin_Resume.pdf" 
-      scrolling="no" 
-     ></iframe>
+      <a href="../../assets/DanMartin_Resume.pdf" target="_blank">My Full Resume</a>
+      <h2>Some things that I work with:</h2>
+      <div *ngFor="let cat of categories" class="list-wrap">
+        <h3>{{cat.title}}</h3>
+        <mat-chip-list>
+          <mat-chip *ngFor="let skill of cat.skills" [disableRipple]="true" [selectable]="false">{{skill}}</mat-chip>
+        </mat-chip-list>
+      </div>
   </div>
 </div>
