@@ -12,6 +12,12 @@ import { mainAnim } from '../animations';
 })
 export class ResumeComponent implements OnInit {
 
+  categories = [
+    {title:'Languages', skills:['JavaScript', 'CSS', 'HTML', 'PHP', 'Swift', 'TypeScript', 'C#', 'Java', 'SASS']},
+    {title:'Tools + Environments', skills:['jQuery', 'Angular', 'Wordpress', 'MySQL', 'Node', 'Bootstrap','Git', 'XCode', 'Unity', 'AJAX', 'REST APIs', 'JSON', 'Firebase', 'Chrome APIs']},
+    {title:'Other Skills', skills:['Photoshop', 'Adobe Illustrator', 'Web Design', 'Game Design', 'Chrome Exstensions']},
+  ]
+
   constructor() { }
 
   ngOnInit() {
