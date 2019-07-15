@@ -7,8 +7,8 @@ import { ResumeComponent } from './resume/resume.component';
 
 const routes: Routes = [
   { path: 'main', component: MainComponent, data: {animation: "Main"} },
-  { path: 'resume', component: ResumeComponent, data: {animation: "Resume"} },
-  { path: 'work', component: WorkComponent, data: {animation: "Work"} },
+  { path: 'resume', component: ResumeComponent, data: {animation: "Sub"} },
+  { path: 'work', component: WorkComponent, data: {animation: "Sub"} },
   { path: '',
     redirectTo: '/main',
     pathMatch: 'full'
