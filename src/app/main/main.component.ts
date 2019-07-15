@@ -26,7 +26,7 @@ export class MainComponent {
   links: Link[] = [
     {route: "/work", image: "memory", text: "My Work", isHidden: true, state: '*'},
     {route: "/", image: "tag_faces", text: "About Me", isHidden: true, state: '*'},
-    {route: "/resume", image: "insert_drive_file", text: "My Resume", isHidden: true, state: '*'}
+    {route: "/resume", image: "insert_drive_file", text: "Resume+Skills", isHidden: true, state: '*'}
   ];
 
   mouseEnter(l){
