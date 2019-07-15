@@ -38,8 +38,27 @@ export const routingAnims =
           animate('0.1s ease-in-out', style({ transform: 'translateX(-5%)' })),
           animate('0.4s ease-in-out', style({ transform: 'translateX(100%)' }))
         ], { optional: true }),
-      ])
-    ])
+      ]),
+    ]),
+
+    //animation from any page to main
+    transition('Sub => Sub', [
+      query(':enter, :leave', style({ position: 'fixed', width:'100%', height: '80%' })
+      , { optional: true }),
+
+      group([ 
+        query(':enter', [
+          style({ transform: 'translateX(-100%)' }),
+          animate('0.4s ease-in-out', style({ transform: 'translateX(0%)' })),
+          query('@mainAnim', animateChild())
+        ], { optional: true }),
+        query(':leave', [
+          style({ transform: 'translateX(0%)' }),
+          animate('0.1s ease-in-out', style({ transform: 'translateX(-5%)' })),
+          animate('0.4s ease-in-out', style({ transform: 'translateX(100%)' }))
+        ], { optional: true }),
+      ]),
+    ]),
   ])
 
 //Animation wrapper for main component
