@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 
 import { MaterialsModule } from './materials/materials.module';
 
-
 import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
