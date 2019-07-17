@@ -1,13 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'theme.scss';
 @import "colors.scss";
+@import "~@fortawesome/fontawesome-free/css/all.css";
 
 html, body { height: 100%; }
 body { 
-    margin: 0; 
+    margin: 0px; 
     font-family: 'Rubik', sans-serif; 
     background-color: $light;
 }
+
+.app {
+    min-height: 80%;
+}
+
+
+app-footer{
+    height: 50px;
+    width: 100%;
+}
+
+
 
 %selectless{
     -webkit-user-select: none;
@@ -21,11 +34,3 @@ body {
     cursor: pointer;
     outline:none;
 }
-
-app-footer{
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-}
-
-
