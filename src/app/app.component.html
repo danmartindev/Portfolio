@@ -1,9 +1,9 @@
 
-<div class="app">
-    <app-header></app-header>
-    <div [@routeAnimations]="prepareRoute(outlet) && outlet.activatedRouteData && outlet.activatedRouteData['animation']" style="height: 80%">
-        <router-outlet #outlet="outlet"></router-outlet>
-    </div>
+<app-header></app-header>
+
+<div id="route-wrap" 
+    [@routeAnimations]="prepareRoute(outlet) && outlet.activatedRouteData && outlet.activatedRouteData['animation']" >
+    <router-outlet #outlet="outlet"></router-outlet>
 </div>
 
 <app-footer></app-footer>
