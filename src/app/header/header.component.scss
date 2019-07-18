@@ -3,7 +3,8 @@
 mat-toolbar{
     //margin-bottom: 20px;
     border-bottom: 1px solid $accent;
-    z-index: 200;
+    z-index: 10;
+    margin-bottom: 20px;
     position: fixed;
     top: 0px;
     width: 100%;
@@ -13,9 +14,4 @@ mat-toolbar{
 
 #menuBtn{
     float: right;
-}
-
-// pushes other content down
-#spacer{
-    height: 50px;
 }
