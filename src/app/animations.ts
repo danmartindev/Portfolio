@@ -6,7 +6,7 @@ export const routingAnims =
   trigger('routeAnimations', [
     //animation from main page to a sub-page
     transition('Main => *', [
-      query(':enter, :leave', style({ position: 'fixed', width:'100%', height: '80%' })
+      query(':enter, :leave', style({ position: 'fixed', width:'100%', height: '100%' })
         , { optional: true }),
       group([ 
         query(':enter', [
@@ -23,8 +23,8 @@ export const routingAnims =
     ]),
 
     //animation from any page to main
-    transition('* => Main', [
-      query(':enter, :leave', style({ position: 'fixed', width:'100%', height: '80%' })
+    transition('Sub => Main', [
+      query(':enter, :leave', style({ position: 'fixed', width:'100%', height: '100%' })
       , { optional: true }),
 
       group([ 
@@ -43,7 +43,7 @@ export const routingAnims =
 
     //animation from any page to main
     transition('Sub => Sub', [
-      query(':enter, :leave', style({ position: 'fixed', width:'100%', height: '80%' })
+      query(':enter, :leave', style({ position: 'fixed', width:'100%' , height: '100%'})
       , { optional: true }),
 
       group([ 
@@ -67,7 +67,6 @@ export let mainAnim =
 
     transition(':enter', [
         query('@colorUp', stagger(200, animateChild()), { optional: true }),
-        //query('@dropDown', animateChild(), { optional: true }), 
     ]),
   ])
 
@@ -117,9 +116,7 @@ export let fadeUp =
 
 export let rotate =  
   trigger('rotate', [
-    
     state('expanded', style({ transform: 'rotate(180deg)' })),
-    //state('rotated', style({ transform: 'rotate(-180)' })),
 
     transition('* <=> expanded', [
         animate('250ms ease-in-out'),
