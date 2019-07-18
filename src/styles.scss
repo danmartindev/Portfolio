@@ -3,24 +3,24 @@
 @import "colors.scss";
 @import "~@fortawesome/fontawesome-free/css/all.css";
 
+html {
+    //overflow-y: scroll;
+}
+
 html, body { height: 100%; }
 body { 
-    margin: 0px; 
+    margin: 0px;
     font-family: 'Rubik', sans-serif; 
     background-color: $light;
 }
 
-.app {
-    min-height: 80%;
+#route-wrap{
+    height: 100%;
 }
 
-
-app-footer{
-    height: 50px;
-    width: 100%;
+.scrolling {
+    padding-top: 50px;
 }
-
-
 
 %selectless{
     -webkit-user-select: none;
