@@ -42,23 +42,23 @@ export const routingAnims =
     ]),
 
     //animation from any page to main
-    transition('Sub => Sub', [
-      query(':enter, :leave', style({ position: 'fixed', width:'100%' , height: '100%'})
-      , { optional: true }),
+    // transition('Sub => Sub', [
+    //   query(':enter, :leave', style({ position: 'fixed', width:'100%' , height: '100%'})
+    //   , { optional: true }),
 
-      group([ 
-        query(':enter', [
-          style({ transform: 'translateX(-100%)' }),
-          animate('0.4s ease-in-out', style({ transform: 'translateX(0%)' })),
-          query('@mainAnim', animateChild())
-        ], { optional: true }),
-        query(':leave', [
-          style({ transform: 'translateX(0%)' }),
-          animate('0.1s ease-in-out', style({ transform: 'translateX(-5%)' })),
-          animate('0.4s ease-in-out', style({ transform: 'translateX(100%)' }))
-        ], { optional: true }),
-      ]),
-    ]),
+    //   group([ 
+    //     query(':enter', [
+    //       style({ transform: 'translateX(-100%)' }),
+    //       animate('0.4s ease-in-out', style({ transform: 'translateX(0%)' })),
+    //       query('@mainAnim', animateChild())
+    //     ], { optional: true }),
+    //     query(':leave', [
+    //       style({ transform: 'translateX(0%)' }),
+    //       animate('0.1s ease-in-out', style({ transform: 'translateX(-5%)' })),
+    //       animate('0.4s ease-in-out', style({ transform: 'translateX(100%)' }))
+    //     ], { optional: true }),
+    //   ]),
+    // ]),
   ])
 
 //Animation wrapper for main component
@@ -75,16 +75,25 @@ export let collapser =
   trigger('collapser', [
     state('*', style({ height: '0px', opacity: 0})),
     state('expanded', style({ height: '*'})),
-    transition('* <=> expanded', [
-      animate('0.3s ease-in-out'),
+    transition('* => expanded', [
+      group([
+        animate('0.25s ease-in-out', style({ height: '*' })),
+        animate('0.3s .05s ease-in-out', style({ opacity: 1 }))
+      ])
+    ]),
+    transition('expanded => *', [
+      group([
+        animate('0.25s ease-in-out', style({ opacity: 0 })),
+        animate('0.3s .05s ease-in-out', style({ height: '0px' })),
+      ])
     ])
   ])
 
 export let colorUp =  
   trigger('colorUp', [
 
-    state('void', style({ opacity: 0, transform: 'translateY(10px)'})),
-    state('hovered', style({  transform: 'translateY(-10px)', color: '#FFDF56'})),
+    state('void', style({ opacity: 0, transform: 'translateY(12px)'})),
+    state('hovered', style({  transform: 'translateY(-12px)', color: '#FFDF56'})),
 
     transition('* <=> hovered', [
         animate('250ms ease-in-out'),
@@ -106,8 +115,8 @@ export let dropDown =
 export let fadeUp =  
   trigger('fadeUp', [
 
-    state('*', style({ transform: 'translateY(10px)', opacity: 0 })),
-    state('hovered', style({  transform: 'translateY(-10px)', opacity: '*' })),
+    state('*', style({ transform: 'translateY(8px)', opacity: 0 })),
+    state('hovered', style({  transform: 'translateY(-8px)', opacity: '*' })),
 
     transition('* <=> hovered', [
         animate('250ms ease-in-out'),
