@@ -1,21 +1,27 @@
 <mat-toolbar color="primary" >
-    <span routerLink="/main" class="clean-btn">Daniel Martin</span>
+
+  <!-- main links, container to make flex-end style work correctly-->
+  <div id="flex-wrap">
+      <span routerLink="/main" class="clean-btn">Daniel Martin</span>
     
-    <button mat-icon-button [matMenuTriggerFor]="navMenu">
-        <i class="material-icons clean-btn" id="menuBtn">menu</i>
+      <button id="menuBtn" mat-icon-button [matMenuTriggerFor]="navMenu" >
+        <i class="material-icons clean-btn" >menu</i>
+      </button>
+  </div>
+    
+  <!-- dropdown nav menu -->
+  <mat-menu #navMenu="matMenu">
+    <button mat-menu-item routerLink="/work">
+      <mat-icon class="clean-btn">code</mat-icon>
+      <span>My Work</span>
     </button>
-    <mat-menu #navMenu="matMenu">
-        <button mat-menu-item routerLink="/work">
-          <mat-icon class="clean-btn">memory</mat-icon>
-          <span>My Work</span>
-        </button>
-        <button mat-menu-item routerLink="/">
-          <mat-icon class="clean-btn">tag_faces</mat-icon>
-          <span>About Me</span>
-        </button>
-        <button mat-menu-item routerLink="/resume">
-          <mat-icon class="clean-btn">insert_drive_file</mat-icon>
-          <span>Resume</span>
-        </button>
-      </mat-menu>
+    <button mat-menu-item routerLink="/">
+      <mat-icon class="clean-btn">tag_faces</mat-icon>
+      <span>About Me</span>
+    </button>
+    <button mat-menu-item routerLink="/resume">
+      <mat-icon class="clean-btn">insert_drive_file</mat-icon>
+      <span>Resume</span>
+    </button>
+  </mat-menu>
 </mat-toolbar>
