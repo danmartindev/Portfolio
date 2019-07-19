@@ -24,7 +24,7 @@ export class MainComponent {
 
   // Links of main page //
   links: Link[] = [
-    {route: "/work", image: "memory", text: "My Work", isHidden: true, state: '*'},
+    {route: "/work", image: "code", text: "My Work", isHidden: true, state: '*'},
     {route: "/", image: "tag_faces", text: "About Me", isHidden: true, state: '*'},
     {route: "/resume", image: "insert_drive_file", text: "Resume+Skills", isHidden: true, state: '*'}
   ];
