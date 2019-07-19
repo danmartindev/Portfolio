@@ -14,8 +14,8 @@
 
   <!-- link text -->
   <div class="link-wrap">
-    <span *ngFor="let l of links">
-      <span [@fadeUp]="l.state">{{l.text}}</span>
+    <span *ngFor="let l of links" [@fadeUp]="l.state">
+      <span>{{l.text}}</span>
     </span>
   </div>
 
