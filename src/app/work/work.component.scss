@@ -4,12 +4,23 @@
     margin-bottom: 50px;
 }
 
+.tab-wrap{
+    padding-top: 25px;
+    color: $dark;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+}
+
 .entry-wrap{
     min-width: 375px;
     width: 45%;
     overflow: hidden;
     color: $dark;
     margin-bottom: 25px;
+
     h1 {
         font-size: 30px;
         margin: 0px;
@@ -28,29 +39,10 @@
         height: 30px;
         line-height: 30px;
     }
-}
 
-
-.tab-wrap{
-    padding-top: 25px;
-    color: $dark;
-    width: 80%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between; 
-    flex-wrap: wrap;
-   
-}
-
-.myimg{
-    min-width: 400px;
-    height: 400px;
-    background-color: white;
-}
-
-mat-expansion-panel{
-    background-color: $light;
-    box-shadow: none !important;
-    width: 400px;
+    .collapser{
+        padding: 15px 0px;
+        border-bottom: 1px solid $dark;
+    }
 }
 
