@@ -2,7 +2,10 @@
 
   <!-- main links, container to make flex-end style work correctly-->
   <div id="flex-wrap">
-      <span routerLink="/main" class="clean-btn">Daniel Martin</span>
+      <div routerLink="/main" class="clean-btn">
+        <mat-icon class="clean-btn">home</mat-icon>
+        <span>Daniel Martin</span>
+      </div>
     
       <button id="menuBtn" mat-icon-button [matMenuTriggerFor]="navMenu" >
         <i class="material-icons clean-btn" >menu</i>
@@ -24,4 +27,5 @@
       <span>Resume</span>
     </button>
   </mat-menu>
+  
 </mat-toolbar>
