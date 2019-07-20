@@ -22,6 +22,14 @@
         margin-top: 10px;
         float: right;
         color: $dark;
+
+        -webkit-transition: color .2s; 
+        transition: color .2s;
+        transition-timing-function: ease-in-out;
+    }
+
+    a:hover{
+        color: $accent;
     }
 }
 
