@@ -30,4 +30,12 @@ mat-toolbar {
     }
 }
 
+.mat-menu-item{
+    color: $dark;
+    font-family: 'Rubik', sans-serif; 
+    mat-icon{
+        color: $dark    
+    }
+}
+
 
