@@ -5,7 +5,7 @@ import { trigger, state, transition, style, animate, query, stagger, animateChil
 export const routingAnims = 
   trigger('routeAnimations', [
     //animation from main page to a sub-page
-    transition('Main => *', [
+    transition('main => *', [
       query(':enter, :leave', style({ position: 'fixed', width:'100%', height: '100%' })
         , { optional: true }),
       group([ 
@@ -23,7 +23,7 @@ export const routingAnims =
     ]),
 
     //animation from any page to main
-    transition('Sub => Main', [
+    transition('* => main', [
       query(':enter, :leave', style({ position: 'fixed', width:'100%', height: '100%' })
       , { optional: true }),
 
@@ -41,24 +41,24 @@ export const routingAnims =
       ]),
     ]),
 
-    //animation from any page to main
-    // transition('Sub => Sub', [
-    //   query(':enter, :leave', style({ position: 'fixed', width:'100%' , height: '100%'})
-    //   , { optional: true }),
+    //animation from sub pages to each other
+    transition('* => *', [
+      query(':enter, :leave', style({ position: 'fixed', width:'100%' , height: '100%'})
+      , { optional: true }),
 
-    //   group([ 
-    //     query(':enter', [
-    //       style({ transform: 'translateX(-100%)' }),
-    //       animate('0.4s ease-in-out', style({ transform: 'translateX(0%)' })),
-    //       query('@mainAnim', animateChild())
-    //     ], { optional: true }),
-    //     query(':leave', [
-    //       style({ transform: 'translateX(0%)' }),
-    //       animate('0.1s ease-in-out', style({ transform: 'translateX(-5%)' })),
-    //       animate('0.4s ease-in-out', style({ transform: 'translateX(100%)' }))
-    //     ], { optional: true }),
-    //   ]),
-    // ]),
+      group([ 
+        query(':enter', [
+          style({ transform: 'translateX(100%)' }),
+          animate('0.4s ease-in-out', style({ transform: 'translateX(0%)' })),
+          query('@mainAnim', animateChild())
+        ], { optional: true }),
+        query(':leave', [
+          style({ transform: 'translateY(0%)' }),
+          animate('0.1s ease-in-out', style({ transform: 'translateX(5%)' })),
+          animate('0.4s ease-in-out', style({ transform: 'translateX(-100%)' }))
+        ], { optional: true }),
+      ]),
+    ]),
   ])
 
 //Animation wrapper for main component
