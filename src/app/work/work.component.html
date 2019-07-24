@@ -12,8 +12,9 @@
                     <h1>{{e.title}}</h1>
                     <h3>{{e.company}}</h3>
                     <div>{{e.date}}</div>
+                    <div class="link-div"><a href="{{e.link}}" target="_blank">{{e.linkText}}</a></div>
                     <button (click)="collapse(e)" mat-button ><i class="material-icons clean-btn" [@rotate]="e.state" >arrow_drop_down</i></button>  
-                    <div class="collapser" [@collapser]="e.state">
+                    <div class="collapser" [@collapser]="e.state" [innerHTML] = "e.content">
                         {{e.content}}
                     </div>   
                 </div>
