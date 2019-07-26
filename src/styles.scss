@@ -30,3 +30,12 @@ body {
     cursor: pointer;
     outline:none;
 }
+
+// MEDIA QUERIES //
+@mixin main {
+    @media (max-width: 900px) { @content; }
+}
+
+@mixin work {
+    @media (max-width: 1075px) { @content; }
+}
