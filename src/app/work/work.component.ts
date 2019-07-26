@@ -1,7 +1,7 @@
 import { MyWorkService } from './../Services/my-work.service';
 import { Component, OnInit, enableProdMode } from '@angular/core';
 import { dropDown, mainAnim, collapser, rotate } from '../animations';
-import { Entry } from '../entry';
+import { Entry, ProjEntry } from '../entry';
 
 @Component({
   selector: 'app-work',
@@ -18,7 +18,7 @@ import { Entry } from '../entry';
 export class WorkComponent implements OnInit {
 
   expEntries: Entry[] = [];
-  projEntries: Entry[] = [];
+  projEntries: ProjEntry[] = [];
   
   constructor(private entryService: MyWorkService) { }
 
