@@ -2,21 +2,18 @@
 
   <!-- link images -->
   <div class="link-wrap">
-    <i 
-      class="material-icons clean-btn" 
-      *ngFor="let l of links"
-      routerLink="{{l.route}}"
-      (mouseenter)="mouseEnter(l)" 
-      (mouseleave)="mouseLeave(l)"
-      [@colorUp]="l.state"
-    >{{l.image}}</i>
-  </div>
-
-  <!-- link text -->
-  <div class="link-wrap">
-    <span *ngFor="let l of links" [@fadeUp]="l.state">
-      <span>{{l.text}}</span>
-    </span>
+    <div *ngFor="let l of links" class="link">
+        <i 
+        class="material-icons clean-btn" 
+        routerLink="{{l.route}}"
+        (mouseenter)="mouseEnter(l)" 
+        (mouseleave)="mouseLeave(l)"
+        [@colorUp]="l.state"
+        >{{l.image}}</i>
+        <span [@fadeUp]="l.state" class="l-text" >
+          <span>{{l.text}}</span>
+        </span>
+    </div>
   </div>
 
 </div>
