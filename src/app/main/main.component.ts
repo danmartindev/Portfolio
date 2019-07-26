@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { fadeUp, mainAnim, colorUp } from '../animations';
 
 export interface Link {
@@ -20,7 +20,8 @@ export interface Link {
   ]
 })
 
-export class MainComponent {
+export class MainComponent implements OnInit{
+  isSmall = false;
 
   // Links of main page //
   links: Link[] = [
@@ -29,11 +30,40 @@ export class MainComponent {
     {route: "/resume", image: "insert_drive_file", text: "Resume+Skills", isHidden: true, state: '*'}
   ];
 
+  ngOnInit() {
+    if(window.innerWidth < 900){
+      this.isSmall = true;
+      this.setStates("visible")
+    }
+  }
+
   mouseEnter(l){
     l.state = 'hovered';
   }
 
   mouseLeave(l){
-    l.state = '*';
+    if(this.isSmall){
+      l.state = 'visible';
+    } else {
+      l.state = '*';
+    }
   }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    if(event.target.innerWidth < 900){
+      this.isSmall = true;
+      this.setStates("visible");
+    } else {
+      this.isSmall = false;
+      this.setStates("*");
+    }
+  }
+
+  setStates(state){
+    for (let l of this.links) {
+      l.state = state;
+    }
+  }
+
 }
