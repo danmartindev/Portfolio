@@ -117,6 +117,7 @@ export let fadeUp =
 
     state('*', style({ transform: 'translateY(8px)', opacity: 0 })),
     state('hovered', style({  transform: 'translateY(-8px)', opacity: '*' })),
+    state('visible', style({ opacity: '*' })),
 
     transition('* <=> hovered', [
         animate('250ms ease-in-out'),
