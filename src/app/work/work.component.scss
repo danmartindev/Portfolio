@@ -1,4 +1,5 @@
 @import '../../colors.scss';
+@import "../../styles.scss";
 
 #work-wrap{
     margin-bottom: 50px;
@@ -15,7 +16,7 @@
 }
 
 .entry-wrap{
-    min-width: 375px;
+    min-width: 400px;
     width: 45%;
     overflow: hidden;
     color: $dark;
@@ -55,7 +56,16 @@
         padding: 15px 0px;
         border-bottom: 1px solid $dark;
         margin-bottom: 15px;
+        cursor: default;
     }
 
+}
+
+@include work{
+    .tab-wrap{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
