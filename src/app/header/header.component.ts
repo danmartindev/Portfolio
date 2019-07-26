@@ -18,10 +18,8 @@ export class HeaderComponent implements OnInit {
     this.myRouter.events.subscribe(event => {
       if(event instanceof NavigationEnd) {
         if(event.url == "/main"){
-          console.log("meep");
           this.btnState = '*'
         } else {
-          console.log(event.url);
           this.btnState = 'show'
         }
       }
