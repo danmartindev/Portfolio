@@ -1,4 +1,4 @@
-import { Entry } from './../entry';
+import { Entry, ProjEntry } from './../entry';
 import { expEntries, projEntries } from './../my-entries';
 
 import { Injectable } from '@angular/core';
@@ -14,7 +14,7 @@ export class MyWorkService {
     return expEntries;
   }
 
-  getProjEntries(): Entry[] {
+  getProjEntries(): ProjEntry[] {
     return projEntries;
   }
 }
