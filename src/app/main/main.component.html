@@ -2,7 +2,7 @@
 
   <!-- link images -->
   <div class="link-wrap">
-    <div *ngFor="let l of links" class="link">
+    <div *ngFor="let l of links" class="link"></div>
         <i 
         class="material-icons clean-btn" 
         routerLink="{{l.route}}"
@@ -10,7 +10,7 @@
         (mouseleave)="mouseLeave(l)"
         [@colorUp]="l.state"
         >{{l.image}}</i>
-        <span [@fadeUp]="l.state" class="l-text" >
+        <span [@fadeUp]="l.state" class="l-text">
           <span>{{l.text}}</span>
         </span>
     </div>
