@@ -104,14 +104,6 @@ export let colorUp =
     ])
   ])
 
-export let dropDown =
-  trigger('dropDown', [
-    // state('void', style({ transform: 'translateY(-100%)', opacity: 0})),
-    // transition(':enter', [
-    //   animate('1s ease-in')
-    // ])
-  ])
-
 export let fadeUp =  
   trigger('fadeUp', [
 
