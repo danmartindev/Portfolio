@@ -1,17 +1,17 @@
 <div id="main-wrap" @mainAnim>
 
-  <!-- link images -->
   <div class="link-wrap">
     <div *ngFor="let l of links" class="link" >
         <i 
-        class="material-icons clean-btn" 
-        routerLink="{{l.route}}"
-        (mouseenter)="mouseEnter(l)" 
-        (mouseleave)="mouseLeave(l)"
-        [@colorUp]="l.state"
-        >{{l.image}}</i>
-        <span [@fadeUp]="l.state" class="l-text"
+          class="material-icons clean-btn" 
+          routerLink="{{l.route}}"
+          (mouseenter)="mouseEnter(l)" 
+          (mouseleave)="mouseLeave(l)"
+          [@colorUp]="l.state"
         >
+          {{l.image}}
+        </i>
+        <span [@fadeUp]="l.state" class="l-text">
           <span>{{l.text}}</span>
         </span>
     </div>
