@@ -33,12 +33,19 @@
     }
     
     .link-div {
-        height: 19px;
         margin: 8px 0px;
+        
 
         a {
+            display: flex;
+            vertical-align: middle;
             text-decoration: none;
-            color: $dark;
+            color: $dark;        
+        }
+
+        mat-icon{ 
+            font-size: 19px;
+            width: 12px;
         }
     }
     
