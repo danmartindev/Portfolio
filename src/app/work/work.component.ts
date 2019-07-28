@@ -1,6 +1,6 @@
 import { MyWorkService } from './../Services/my-work.service';
 import { Component, OnInit, enableProdMode } from '@angular/core';
-import { dropDown, mainAnim, collapser, rotate } from '../animations';
+import { mainAnim, collapser, rotate } from '../animations';
 import { Entry, ProjEntry } from '../entry';
 
 @Component({
@@ -9,7 +9,6 @@ import { Entry, ProjEntry } from '../entry';
   styleUrls: ['./work.component.scss'],
   animations: [
     collapser,
-    dropDown,
     mainAnim,
     rotate
   ]
