@@ -116,6 +116,15 @@ export let fadeUp =
     ]),
   ])
 
+export let homeSlide =  
+  trigger('homeSlide', [
+    state('*', style({ transform: 'translateX(-36px)' })),
+    state('show', style({ transform: 'translateX(0px)' })),
+    transition('* <=> show', [
+        animate('400ms ease-in-out'),
+    ]),
+  ])
+
 export let rotate =  
   trigger('rotate', [
     state('expanded', style({ transform: 'rotate(180deg)' })),
@@ -125,14 +134,7 @@ export let rotate =
     ]),
   ])
 
-  export let homeSlide =  
-  trigger('homeSlide', [
-    state('*', style({ transform: 'translateX(-36px)' })),
-    state('show', style({ transform: 'translateX(0px)' })),
-    transition('* <=> show', [
-        animate('400ms ease-in-out'),
-    ]),
-  ])
+
 
 
 
