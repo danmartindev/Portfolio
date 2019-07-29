@@ -33,9 +33,9 @@
     }
     
     .link-div {
-        margin: 8px 0px;
-        
-
+        margin: 8px 15px 0px 0px;
+        height: 24px;
+        display: inline-block;
         a {
             display: flex;
             vertical-align: middle;
@@ -46,6 +46,15 @@
         mat-icon{ 
             font-size: 19px;
             width: 12px;
+            transition: color .2s, transform .2s;
+            transition-timing-function: ease-in-out;
+        }
+    }
+
+    .link-div:hover {
+        mat-icon{
+            color: $accent;
+            transform: translateX(5px);
         }
     }
     
