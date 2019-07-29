@@ -10,7 +10,7 @@ import { Entry, ProjEntry } from '../entry';
   animations: [
     collapser,
     mainAnim,
-    rotate,
+    rotate
   ]
 })
 
