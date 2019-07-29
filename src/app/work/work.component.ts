@@ -10,7 +10,7 @@ import { Entry, ProjEntry } from '../entry';
   animations: [
     collapser,
     mainAnim,
-    rotate
+    rotate,
   ]
 })
 
@@ -32,7 +32,6 @@ export class WorkComponent implements OnInit {
   }
 
   collapse(entry){
-    console.log("clciked");
     if(entry.state == "*"){
       entry.state = "expanded";
     } else {
