@@ -36,6 +36,7 @@
         margin: 8px 15px 0px 0px;
         height: 24px;
         display: inline-block;
+
         a {
             display: flex;
             vertical-align: middle;
@@ -43,7 +44,7 @@
             color: $dark;        
         }
 
-        mat-icon{ 
+        mat-icon { 
             font-size: 19px;
             width: 12px;
             transition: color .2s, transform .2s;
@@ -58,7 +59,11 @@
         }
     }
     
-    button{
+    .chip-list {
+        margin-top: 10px;
+    }
+
+    button {
         color: white;
         background-color: $extra;
         display: block;
@@ -68,10 +73,10 @@
         line-height: 30px;
     }
 
-    .collapser{
-        padding: 15px 0px;
+    .collapser {
+        padding: 10px 0px 10px 0px;
+        margin-bottom: 10px;
         border-bottom: 1px solid $dark;
-        margin-bottom: 15px;
         cursor: default;
     }
 
