@@ -1,5 +1,5 @@
 import { animateChild } from '@angular/animations';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { mainAnim } from '../animations';
 
 @Component({
@@ -10,21 +10,13 @@ import { mainAnim } from '../animations';
     mainAnim
   ]
 })
-export class ResumeComponent implements OnInit {
+export class ResumeComponent {
 
+  //current skill chips
   categories = [
     {title:'Code', skills:['JavaScript', 'CSS', 'HTML', 'PHP', 'Swift', 'TypeScript', 'C#', 'Java', 'SASS']},
     {title:'Tools + Environments', skills:['jQuery', 'Angular2+', 'Wordpress', 'MySQL', 'Node', 'Bootstrap','Git', 'XCode', 'Unity', 'AJAX', 'REST APIs', 'JSON', 'Firebase', 'Chrome APIs']},
     {title:'Other Skills', skills:['Photoshop', 'Adobe Illustrator', 'Web Design', 'Game Design', 'Chrome Exstensions']},
   ]
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  // add gradient/links to footer
-  // figure out iframe deal
-  // finish styles for work/projects
 
 }
