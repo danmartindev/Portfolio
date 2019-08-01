@@ -25,14 +25,35 @@
             flex-direction: row;
             min-width: 350px;
             max-width: 30%;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
 
-            mat-icon{
+            mat-icon {
                 font-size: 70px;
             }
 
-            i{
+            i {
                 font-size: 70px;
+            }
+        }
+    }
+
+    @include small550 {
+        width: 100%;
+
+        img {
+            height: 175px;
+            width: 175px;
+            margin-bottom: 10px;
+        }
+
+        #about-info{
+            padding: 20px;
+        }
+
+        #hobby-wrap{
+            .hobby{
+                min-width: 250px;
+                padding: 10px;
             }
         }
     }
