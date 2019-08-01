@@ -37,6 +37,13 @@ export const expEntries : Entry[] = [
 ]
 
 export const projEntries : ProjEntry[] = [
+
+    //Portfolio
+    {title: "My Portfolio", type: "Angular Site", date: "Still Updating!", 
+    link: "https://github.com/danmartindev/Portfolio", linkText: "The code", 
+    content: `If you were looking for the code behind the curtain, look no further! Check out the Github link above to see 
+    all the code and possibly some future updates.`, 
+    chips: ['Angular2+', 'HTML', 'CSS', 'SASS', 'TypeScript', 'Angular Material'], state:"*"},
     
     //Social Stopwatch
     {title: "Social Media Stopwatch", type: "Google Chrome Extension", date: " March 2019 - April 2019", 
@@ -52,7 +59,7 @@ export const projEntries : ProjEntry[] = [
     user in the options page.
     <br>
     <br>
-    You can check out the code or download it to try for yourself in the links down below.`, 
+    You can check out the code or try for yourself in the links above.`, 
     chips: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Chrome APIs'], state:"*"},
 
 ]
