@@ -28,7 +28,6 @@ export class WorkComponent implements OnInit {
   getEntries(){
     this.expEntries = this.entryService.getExpEntries();
     this.projEntries = this.entryService.getProjEntries();
-
   }
 
   collapse(entry){
