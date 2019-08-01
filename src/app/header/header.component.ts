@@ -12,8 +12,10 @@ import { homeSlide } from '../animations';
 })
 export class HeaderComponent implements OnInit {
 
+  //animation state for home btn
   btnState: String = '*';
 
+  //private router for updating btn state on route change
   constructor(private myRouter: Router) { 
     this.myRouter.events.subscribe(event => {
       if(event instanceof NavigationEnd) {
