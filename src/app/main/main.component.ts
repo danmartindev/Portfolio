@@ -21,6 +21,7 @@ export interface Link {
 })
 
 export class MainComponent implements OnInit{
+  //var for updating icon animation/style based on screen width
   isSmall = false;
 
   // Links of main page //
@@ -31,24 +32,14 @@ export class MainComponent implements OnInit{
   ];
 
   ngOnInit() {
+    //update for screen width on init
     if(window.innerWidth < 900){
       this.isSmall = true;
       this.setStates("visible")
     }
   }
 
-  mouseEnter(l){
-    l.state = 'hovered';
-  }
-
-  mouseLeave(l){
-    if(this.isSmall){
-      l.state = 'visible';
-    } else {
-      l.state = '*';
-    }
-  }
-
+  //update styles on window resize
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     if(event.target.innerWidth < 900){
@@ -63,6 +54,19 @@ export class MainComponent implements OnInit{
   setStates(state){
     for (let l of this.links) {
       l.state = state;
+    }
+  }
+
+  //mouse over functions
+  mouseEnter(l){
+    l.state = 'hovered';
+  }
+
+  mouseLeave(l){
+    if(this.isSmall){
+      l.state = 'visible';
+    } else {
+      l.state = '*';
     }
   }
 
