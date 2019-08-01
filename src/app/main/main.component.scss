@@ -5,6 +5,10 @@
     height: 100%;
     display: flex;
     justify-content: center;
+
+    @include main{
+        height: auto;
+    }
 }
 
 .link-wrap{
@@ -33,11 +37,12 @@
 
     @include main{
         flex-direction: column;
-        margin-top: 50px;
+        margin-top: 25px;
         justify-content: flex-start;
+        padding-bottom: 75px;
         .link{
             i {
-                font-size: 200px;
+                font-size: 175px;
                 margin: 20px;
             }
         }
