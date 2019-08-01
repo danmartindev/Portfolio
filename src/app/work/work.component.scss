@@ -1,11 +1,11 @@
 @import '../../colors.scss';
 @import "../../styles.scss";
 
-#work-wrap{
+#work-wrap {
     margin-bottom: 50px;
 }
 
-.tab-wrap{
+.tab-wrap {
     padding-top: 25px;
     color: $dark;
     width: 80%;
@@ -15,7 +15,7 @@
     flex-wrap: wrap;
 }
 
-.entry-wrap{
+.entry-wrap {
     min-width: 400px;
     width: 45%;
     overflow: hidden;
@@ -82,11 +82,27 @@
 
 }
 
-@include work{
-    .tab-wrap{
+@include work {
+    .tab-wrap {
         width: 100%;
         flex-direction: column;
         align-items: center;
     }
 }
 
+@include small450 {
+    .entry-wrap {
+        min-width: 300px;
+        padding: 8px;
+        h1 {
+            font-size: 20px;
+            margin: 0px;
+        }
+    
+        h3{        
+            font-size: 18px;
+            margin: 8px 0px;
+        }
+    }
+
+}
