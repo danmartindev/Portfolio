@@ -1,4 +1,5 @@
 @import "../../colors.scss";
+@import "../../styles.scss";
 
 #res-wrap{ 
     width: 70%;
@@ -10,7 +11,7 @@
     padding-top: 30px;
     overflow: hidden;
 
-    iframe{
+    iframe {
         border: 0;
         height: 700px;
         left: 0;
@@ -18,7 +19,7 @@
         width: 100%;
     }
 
-    a{
+    a {
         margin-top: 10px;
         float: right;
         color: $dark;
@@ -28,20 +29,49 @@
         transition-timing-function: ease-in-out;
     }
 
-    a:hover{
+    a:hover {
         color: $accent;
     }
 }
 
-#skills-wrap{
+#skills-wrap {
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-between; 
     color: $dark;
 }
 
-.list-wrap{
+.list-wrap {
     max-width: 45%;
-    min-width: 375px;
+    min-width: 300px;
     margin-bottom: 20px;
+}
+
+#small-link {
+    padding-top: 15px;
+    display: none;
+    align-items: center;
+    font-size: 17px;
+
+    a {
+        display: flex;
+        text-decoration: none;
+        i {
+            font-size: 18px;
+        }
+    }
+}
+
+@include small550 {
+    #res-wrap { 
+        width: 90%;
+    }
+    
+    .iframe-container {
+        display: none;
+    }
+
+    #small-link {
+        display: block;
+    }
 }
