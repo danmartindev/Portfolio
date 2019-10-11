@@ -9,30 +9,31 @@
                     *ngFor="let e of expEntries"
                     class="entry-wrap" 
                 >
-                    <h1>{{e.title}}</h1>
-                    <h3>{{e.company}}</h3>
-                    <div>{{e.date}}</div>
-                    <div class="link-div">
-                        <a href="{{e.link}}" target="_blank">
-                            {{e.linkText}}<mat-icon class="clean-btn" *ngIf="e.link">arrow_right</mat-icon>
-                        </a>
+                    <div class="border-wrap">
+                        <h1>{{e.title}}</h1>
+                        <h3>{{e.company}}</h3>
+                        <div>{{e.date}}</div>
+                        <div class="link-div">
+                            <a href="{{e.link}}" target="_blank">
+                                {{e.linkText}}<mat-icon class="clean-btn" *ngIf="e.link">arrow_right</mat-icon>
+                            </a>
+                        </div>
+                        
+                        <div class="chip-list">
+                            <mat-chip-list>
+                                <mat-chip 
+                                    *ngFor="let chip of e.chips" 
+                                >
+                                    {{chip}}
+                                </mat-chip>
+                            </mat-chip-list>
+                        </div>
+                        
+                        <div class="collapser" [@collapser]="e.state" [innerHTML] = "e.content"></div>   
+                        <button (click)="collapse(e)" mat-button >
+                            <i class="material-icons clean-btn" [@rotate]="e.state" >arrow_drop_down</i>
+                        </button>  
                     </div>
-                    
-                    <div class="chip-list">
-                        <mat-chip-list>
-                            <mat-chip 
-                                *ngFor="let chip of e.chips" 
-                            >
-                                {{chip}}
-                            </mat-chip>
-                        </mat-chip-list>
-                    </div>
-                    
-                    <div class="collapser" [@collapser]="e.state" [innerHTML] = "e.content"></div>   
-                    <button (click)="collapse(e)" mat-button >
-                        <i class="material-icons clean-btn" [@rotate]="e.state" >arrow_drop_down</i>
-                    </button>  
-                    
                 </div>
             </div>
         </mat-tab>  
@@ -44,34 +45,36 @@
                     *ngFor="let e of projEntries"
                     class="entry-wrap" 
                 >
-                    <h1>{{e.title}}</h1>
-                    <h3>{{e.company}}</h3>
-                    <div>{{e.date}}</div>
-                    <div class="link-div">
-                        <a href="{{e.link}}" target="_blank">
-                            {{e.linkText}}<mat-icon class="clean-btn" *ngIf="e.link">arrow_right</mat-icon>
-                        </a>
-                    </div>
-                    <div class="link-div">
-                        <a href="{{e.link2}}" target="_blank">
-                            {{e.linkText2}}<mat-icon class="clean-btn" *ngIf="e.link2">arrow_right</mat-icon>
-                        </a>
-                    </div>
-                    
-                    <div class="chip-list">
-                        <mat-chip-list>
-                            <mat-chip 
-                                *ngFor="let chip of e.chips" 
-                            >
-                                {{chip}}
-                            </mat-chip>
-                        </mat-chip-list>
-                    </div>
+                    <div class="border-wrap">
+                        <h1>{{e.title}}</h1>
+                        <h3>{{e.company}}</h3>
+                        <div>{{e.date}}</div>
+                        <div class="link-div">
+                            <a href="{{e.link}}" target="_blank">
+                                {{e.linkText}}<mat-icon class="clean-btn" *ngIf="e.link">arrow_right</mat-icon>
+                            </a>
+                        </div>
+                        <div class="link-div">
+                            <a href="{{e.link2}}" target="_blank">
+                                {{e.linkText2}}<mat-icon class="clean-btn" *ngIf="e.link2">arrow_right</mat-icon>
+                            </a>
+                        </div>
                         
-                    <div class="collapser" [@collapser]="e.state" [innerHTML] = "e.content"></div>   
-                    <button (click)="collapse(e)" mat-button >
-                        <i class="material-icons clean-btn" [@rotate]="e.state" >arrow_drop_down</i>
-                    </button>  
+                        <div class="chip-list">
+                            <mat-chip-list>
+                                <mat-chip 
+                                    *ngFor="let chip of e.chips" 
+                                >
+                                    {{chip}}
+                                </mat-chip>
+                            </mat-chip-list>
+                        </div>
+                            
+                        <div class="collapser" [@collapser]="e.state" [innerHTML] = "e.content"></div>   
+                        <button (click)="collapse(e)" mat-button >
+                            <i class="material-icons clean-btn" [@rotate]="e.state" >arrow_drop_down</i>
+                        </button>  
+                    </div>
                 </div>
             </div>
         </mat-tab>
