@@ -3,7 +3,7 @@ import { Entry, ProjEntry } from './entry';
 export const expEntries : Entry[] = [
 
     //NDA
-    {title: "Freelance Angular Developer", company: "Coll-U", date: "Febuary 2019 - May 2019", 
+    {title: "Front End Developer", company: "Coll-U", date: "Febuary 2019 - May 2019", 
     content: `Coll-U is a startup software development company out of Long Island. My main responsibility was the front end development 
     of an Angular app. My duties also included working with a designer on the UI/UX of the app, and creating user flows/mock-ups.
     <br>
@@ -16,7 +16,7 @@ export const expEntries : Entry[] = [
     chips: ['Angular2+', 'HTML', 'CSS', 'SASS', 'TypeScript', 'Illustrator'], state:"*"},
 
     //AHFC//
-    {title: "Freelance Wordpress Developer", company: "African Heritage Food Co-op", date: "July 2018 - December 2018", 
+    {title: "WordPress Developer", company: "African Heritage Food Co-op", date: "July 2018 - December 2018", 
     link: 'https://myahfc.com/community/', linkText: 'Visit the Site',
     content: `AHFC is a Buffalo based non-profit which works in community development. My position as a freelance developer had me 
     working with a fellow developer to design and develop a new site for AHFC to expand their community. A majority of my time was 
@@ -50,7 +50,7 @@ export const expEntries : Entry[] = [
     chips: ['iOS', 'XCode', 'Mobile'], state:"*"},
 
     //PHT
-    {title: "Wordpress Developer - Co-op/Internship", company: "PHT180, RIT", date: "May 2017 - August 2017", 
+    {title: "WordPress Developer - Co-op/Internship", company: "PHT180, RIT", date: "May 2017 - August 2017", 
     content: `Personalized Healthcare Technology, now PHT180, is an offshoot of RIT’s faculty focused on development and advancement 
     of medical practices and technologies. My position as the WordPress developer for the group had me work with designing and 
     developing WordPress themes and plugins for various faculty members.
