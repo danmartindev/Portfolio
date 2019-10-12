@@ -30,10 +30,10 @@
                         </div>
                         
                         <div class="collapser" [@collapser]="e.state" [innerHTML] = "e.content"></div>   
-                        <button (click)="collapse(e)" mat-button >
-                            <i class="material-icons clean-btn" [@rotate]="e.state" >arrow_drop_down</i>
-                        </button>  
                     </div>
+                    <button (click)="collapse(e)" mat-button >
+                        <i class="material-icons clean-btn" [@rotate]="e.state" >arrow_drop_down</i>
+                    </button>  
                 </div>
             </div>
         </mat-tab>  
@@ -70,11 +70,11 @@
                             </mat-chip-list>
                         </div>
                             
-                        <div class="collapser" [@collapser]="e.state" [innerHTML] = "e.content"></div>   
-                        <button (click)="collapse(e)" mat-button >
-                            <i class="material-icons clean-btn" [@rotate]="e.state" >arrow_drop_down</i>
-                        </button>  
+                        <div class="collapser" [@collapser]="e.state" [innerHTML] = "e.content"></div>                
                     </div>
+                    <button (click)="collapse(e)" mat-button >
+                        <i class="material-icons clean-btn" [@rotate]="e.state" >arrow_drop_down</i>
+                    </button>  
                 </div>
             </div>
         </mat-tab>
